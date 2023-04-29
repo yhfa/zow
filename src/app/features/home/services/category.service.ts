@@ -15,10 +15,11 @@ export class CategoryService {
     private _productService: ProductService
   ) {}
 
-  categories$ = this._http.get<string[]>(this._categoriesUrl).pipe(
-    tap(categories =>
-      this._productService.selectedCategoryChange(categories[0])
-    ),
-    tap(data => console.log('Categories: ', JSON.stringify(data)))
-  );
+  categories$ = this._http
+    .get<string[]>(this._categoriesUrl)
+    .pipe(
+      tap(categories =>
+        this._productService.selectedCategoryChange(categories[0])
+      )
+    );
 }
