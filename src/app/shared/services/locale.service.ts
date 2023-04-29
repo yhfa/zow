@@ -8,11 +8,11 @@ import { Language } from '../interfaces';
 })
 export class LocaleService {
   direction: Direction | null = null;
-  currentLang: string;
+  currentLang: Language;
 
   constructor(private _translate: TranslateService) {
     this._setInitLocale();
-    this.currentLang = this._translate.currentLang;
+    this.currentLang = this._translate.currentLang as Language;
   }
 
   private _setInitLocale() {
