@@ -6,7 +6,7 @@
     "login": "Login"
   },
   "not-found": "Sorry, this page was not found",
-  "logout": "logout",
+  "logout": "Logout",
   "product-table": {
     "add-product": "Add product",
     "update-product": "Update product",
