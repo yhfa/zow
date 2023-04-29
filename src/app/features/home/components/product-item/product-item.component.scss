@@ -1,0 +1,21 @@
+.product-card {
+  background: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 1s;
+  width: 20rem;
+  height: 24rem;
+
+  .img-box {
+    height: 40%;
+    padding: 1rem;
+
+    img {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+}
