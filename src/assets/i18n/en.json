@@ -1,0 +1,8 @@
+{
+  "login": {
+    "user-name": "User name",
+    "password": "Password",
+    "not-correct-credentials": "Not correct credentials",
+    "login": "Login"
+  }
+}

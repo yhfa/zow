@@ -1,0 +1,8 @@
+{
+  "login": {
+    "user-name": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "not-correct-credentials": "البيانات غير صحيحة",
+    "login": "تسجيل الدخول"
+  }
+}
