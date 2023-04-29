@@ -1,0 +1,14 @@
+.product-list-container {
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin: 4rem auto 0;
+    width: 94%;
+  }
+
+  mat-spinner {
+    height: 80vh !important;
+    margin: 0 auto;
+  }
+}

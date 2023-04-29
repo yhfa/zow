@@ -1,0 +1,14 @@
+<div class="product-list-container" *ngIf="vm$ | async as vm">
+  <mat-tab-group (selectedTabChange)="onSelected($event)">
+    <mat-tab *ngFor="let category of vm.categories" [label]="category">
+    </mat-tab>
+  </mat-tab-group>
+
+  <div *ngIf="!vm.isLoading" class="products-list">
+    <div *ngFor="let product of vm.products">
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+
+  <mat-spinner *ngIf="vm.isLoading"></mat-spinner>
+</div>
