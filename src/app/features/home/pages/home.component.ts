@@ -1,16 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductService } from '../product.service';
+
+import { ProductListComponent } from '../components/product-list/product-list.component';
+import { ProductTableComponent } from '../components/product-table/product-table.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProductListComponent, ProductTableComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  constructor(private productsService: ProductService) {}
+export class HomeComponent implements OnInit {
+  isAdmin = false;
 
-  products$ = this.productsService.products$;
+  ngOnInit(): void {
+    const user = localStorage.getItem('user');
+    if (user === 'admin') {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+  }
 }

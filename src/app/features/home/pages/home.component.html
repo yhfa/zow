@@ -1,5 +1,4 @@
-<div *ngIf="products$ | async as products">
-  <p *ngFor="let product of products">
-    {{ product.title }}
-  </p>
+<div>
+  <app-product-list *ngIf="!isAdmin"></app-product-list>
+  <app-product-table *ngIf="isAdmin"></app-product-table>
 </div>
