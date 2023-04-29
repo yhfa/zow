@@ -12,7 +12,7 @@
       mat-button
       class="lang-btn"
       *ngIf="localeService.currentLang === Language.ar"
-      (click)="localeService.useLanguage(Language.ar)"
+      (click)="localeService.useLanguage(Language.en)"
     >
       <mat-icon>language</mat-icon>
       <span>العربية</span>
@@ -22,7 +22,7 @@
       mat-button
       class="lang-btn"
       *ngIf="localeService.currentLang === Language.en"
-      (click)="localeService.useLanguage(Language.en)"
+      (click)="localeService.useLanguage(Language.ar)"
     >
       <mat-icon>language</mat-icon>
       <span>English</span>
