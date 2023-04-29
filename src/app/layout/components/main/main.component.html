@@ -6,10 +6,35 @@
   <main>
     <!-- current route view -->
     <mat-sidenav-container>
-      <mat-sidenav #sidenav mode="side" class="app-sidenav">
+      <mat-sidenav #sidenav mode="over" class="app-sidenav">
         <nav>
-          <p>test</p>
-          <p>test</p>
+          <button
+            mat-button
+            class="lang-btn"
+            *ngIf="localeService.currentLang === Language.ar"
+            (click)="localeService.useLanguage(Language.en)"
+          >
+            <mat-icon>language</mat-icon>
+            <span>English</span>
+          </button>
+
+          <button
+            mat-button
+            class="lang-btn"
+            *ngIf="localeService.currentLang === Language.en"
+            (click)="localeService.useLanguage(Language.ar)"
+          >
+            <mat-icon>language</mat-icon>
+            <span>العربية</span>
+          </button>
+
+          <button
+            mat-button
+            *ngIf="isAuthenticated$ | async"
+            (click)="logout()"
+          >
+            {{ 'logout' | translate }}
+          </button>
         </nav>
       </mat-sidenav>
 
