@@ -6,12 +6,21 @@ form {
   align-items: center;
 
   mat-form-field {
-    min-width: 30vw;
+    width: 30vw;
     font-size: 1.6rem;
+
+    @media screen and (max-width: 768px) {
+      width: 60vw;
+    }
   }
 
   > button {
     margin-top: 2rem;
-    width: 100px;
+    width: 10rem;
+    font-size: 1.4rem;
+  }
+
+  mat-error {
+    font-size: 1.2rem;
   }
 }

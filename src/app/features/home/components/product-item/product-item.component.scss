@@ -7,15 +7,48 @@
   transition: 1s;
   width: 20rem;
   height: 24rem;
+  padding: 1rem;
+  cursor: pointer;
 
   .img-box {
     height: 40%;
-    padding: 1rem;
+    margin-bottom: 1.4rem;
 
     img {
       display: block;
       height: 100%;
       margin: 0 auto;
     }
+  }
+
+  .product-title {
+    font-size: 1.4rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.4rem;
+  }
+
+  .product-category {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #999;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+
+    ::ng-deep {
+      .star-container {
+        margin-inline-start: 0;
+      }
+    }
+  }
+
+  .product-price {
+    font-size: 1.6rem;
   }
 }

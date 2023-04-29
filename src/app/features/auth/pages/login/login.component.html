@@ -28,6 +28,9 @@
       }}</mat-icon>
     </button>
   </mat-form-field>
+  <mat-error *ngIf="!isValidUser">{{
+    'login.not-correct-credentials' | translate
+  }}</mat-error>
   <button
     mat-flat-button
     color="primary"
@@ -36,7 +39,4 @@
   >
     {{ 'login.login' | translate }}
   </button>
-  <mat-error *ngIf="!isValidUser">{{
-    'login.not-correct-credentials' | translate
-  }}</mat-error>
 </form>

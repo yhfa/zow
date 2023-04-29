@@ -2,10 +2,21 @@
   <div class="img-box">
     <img [src]="product.image" [alt]="product.title" />
   </div>
-  <h3>
+  <h3 class="product-title" [matTooltip]="product.title">
     {{ product.title }}
-    <br />
-    <span>{{ product.category }}</span>
   </h3>
-  <a mat-raised-button color="primary" href="#">Add to cart</a>
+  <div class="product-category">{{ product.category }}</div>
+  <div class="product-rating">
+    <star-rating
+      [starType]="'svg'"
+      [rating]="product.rating?.rate || 0"
+    ></star-rating>
+    <span>({{ product.rating?.count }})</span>
+  </div>
+  <div class="product-price">
+    {{
+      product.price
+        | currency : (localeService.currentLang !== Language.ar ? 'EGP' : 'USD')
+    }}
+  </div>
 </div>

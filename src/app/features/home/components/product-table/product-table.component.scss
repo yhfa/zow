@@ -3,15 +3,15 @@
 }
 
 th {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
-td {
+td.data-cell {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 10rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   .img-box {
     height: 4rem;
@@ -26,9 +26,15 @@ td {
 .add-btn {
   margin-block: 1.4rem;
   margin-inline-start: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   background: #e7e7df;
+
+  mat-icon {
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+  }
 }
 
 .update-btn {
