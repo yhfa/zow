@@ -1,0 +1,52 @@
+<div class="dialog-header" mat-dialog-title>
+  <button mat-icon-button (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <h3>{{ data.title }}</h3>
+</div>
+
+<mat-dialog-content class="save-case-question-conatiner">
+  <form
+    class="save-product-form"
+    [formGroup]="saveProductForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label>{{ 'product-table.title' | translate }}</mat-label>
+      <input type="text" matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label>{{ 'product-table.price' | translate }}</mat-label>
+      <input type="text" matInput formControlName="price" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label>{{ 'product-table.description' | translate }}</mat-label>
+      <input type="text" matInput formControlName="description" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label>{{ 'product-table.category' | translate }}</mat-label>
+
+      <mat-select formControlName="category">
+        <mat-option
+          [value]="category"
+          *ngFor="let category of categories$ | async"
+        >
+          {{ category }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit"
+      class="submit-btn"
+      [disabled]="saveProductForm.invalid"
+    >
+      {{ 'product-table.save' | translate }}
+    </button>
+  </form>
+</mat-dialog-content>

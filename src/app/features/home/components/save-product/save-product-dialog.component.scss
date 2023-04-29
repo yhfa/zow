@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.mat-dialog-content {
+  flex: 1;
+}
+
+h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.save-product-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  mat-form-field {
+    min-width: 70%;
+    font-size: 1.6rem;
+  }
+
+  .submit-btn {
+    min-width: 8rem;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+  }
+}
