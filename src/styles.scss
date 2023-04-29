@@ -36,6 +36,8 @@ $zow-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+@import '~css-star-rating/css/star-rating.min.css';
+
 *,
 *::before,
 ::after {
