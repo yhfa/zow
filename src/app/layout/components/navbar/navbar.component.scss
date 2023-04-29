@@ -1,12 +1,16 @@
 .logo {
   flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
-  span {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: orange;
+  img {
+    height: 60%;
   }
+}
+
+button {
+  font-size: 1.6rem;
 }
 
 .lang-btn {
