@@ -1,0 +1,5 @@
+<div *ngIf="products$ | async as products">
+  <p *ngFor="let product of products">
+    {{ product.title }}
+  </p>
+</div>
