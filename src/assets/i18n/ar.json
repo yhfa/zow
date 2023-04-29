@@ -5,5 +5,20 @@
     "not-correct-credentials": "البيانات غير صحيحة",
     "login": "تسجيل الدخول"
   },
-  "not-found": "عذرا, لم يتم العثور على هذه الصفحة"
+  "not-found": "عذرا, لم يتم العثور على هذه الصفحة",
+  "logout": "تسجيل الخروج",
+  "product-table": {
+    "add-product": "اضافة منتج",
+    "update-product": "تعديل منتج",
+    "id": "الرمز التعريفي",
+    "title": "الاسم",
+    "image": "الصورة",
+    "price": "السعر",
+    "description": "الوصف",
+    "category": "الفئة",
+    "rating": "التقيم",
+    "rating-count": "عدد المقيمين",
+    "save": "حفظ",
+    "edit": "الاعدادات"
+  }
 }

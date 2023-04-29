@@ -5,5 +5,20 @@
     "not-correct-credentials": "Not correct credentials",
     "login": "Login"
   },
-  "not-found": "Sorry, this page was not found"
+  "not-found": "Sorry, this page was not found",
+  "logout": "logout",
+  "product-table": {
+    "add-product": "Add product",
+    "update-product": "Update product",
+    "id": "id",
+    "title": "Title",
+    "image": "Image",
+    "price": "Price",
+    "description": "Description",
+    "category": "Category",
+    "rating": "Rating",
+    "rating-count": "Rating count",
+    "save": "Save",
+    "edit": "Edit"
+  }
 }
