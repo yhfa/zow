@@ -1,0 +1,69 @@
+<div class="product-table-container">
+  <div class="mat-elevation-z8">
+    <button mat-raised-button (click)="addProduct()" class="add-btn">
+      {{ 'product-table.add-product' | translate }}
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      *ngIf="(isLoading$ | async) === false"
+    >
+      <ng-container
+        *ngFor="let column of columns"
+        [matColumnDef]="column.columnDef"
+      >
+        <th mat-header-cell *matHeaderCellDef>
+          {{ 'product-table.' + column.header | translate }}
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <span *ngIf="column.type === 'text'">
+            {{ column.cell(row) }}
+          </span>
+
+          <span *ngIf="column.type === 'image'" class="img-box">
+            <img [src]="column.cell(row)" alt="" />
+          </span>
+        </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ 'product-table.edit' | translate }}
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <button
+            mat-icon-button
+            (click)="updateProduct(element)"
+            class="update-btn"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+
+          <button
+            mat-icon-button
+            (click)="deleteProduct(element.id)"
+            class="delete-btn"
+            color="warn"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 50]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+    >
+    </mat-paginator>
+  </div>
+
+  <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
+</div>

@@ -1,0 +1,36 @@
+.mat-elevation-z8 {
+  overflow-x: auto;
+}
+
+th {
+  font-size: 1.4rem;
+}
+
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10rem;
+  font-size: 1.2rem;
+
+  .img-box {
+    height: 4rem;
+    display: inline-block;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.add-btn {
+  margin-block: 1.4rem;
+  margin-inline-start: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: #e7e7df;
+}
+
+.update-btn {
+  color: #7d7d7d;
+}
