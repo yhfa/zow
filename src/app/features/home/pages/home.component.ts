@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductsService } from '../products.service';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { ProductsService } from '../products.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductService) {}
 
   products$ = this.productsService.products$;
 }
