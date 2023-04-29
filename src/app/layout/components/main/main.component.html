@@ -1,0 +1,21 @@
+<div class="main-container">
+  <!-- navbar for all screens  -->
+  <app-navbar [sidenav]="sidenav"></app-navbar>
+
+  <!-- main wrapper for all app -->
+  <main>
+    <!-- current route view -->
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav mode="side" class="app-sidenav">
+        <nav>
+          <p>test</p>
+          <p>test</p>
+        </nav>
+      </mat-sidenav>
+
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-container>
+  </main>
+</div>

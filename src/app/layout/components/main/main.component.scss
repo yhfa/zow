@@ -1,0 +1,19 @@
+:host ::ng-deep {
+  .mat-drawer-content {
+    overflow: unset;
+  }
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex-grow: 1;
+
+    mat-sidenav-container {
+      height: 100%;
+    }
+  }
+}
