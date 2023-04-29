@@ -23,12 +23,12 @@ import { ProductItemComponent } from '../../components/product-item/product-item
 })
 export class ProductListComponent {
   constructor(
-    private _productsService: ProductService,
+    private _productService: ProductService,
     private _categoryService: CategoryService
   ) {}
 
-  products$ = this._productsService.products$;
-  isLoading$ = this._productsService.isProductsLoading$;
+  products$ = this._productService.productsBySelectedCategory$;
+  isLoading$ = this._productService.isProductsLoading$;
   categories$ = this._categoryService.categories$;
 
   vm$ = combineLatest([this.products$, this.isLoading$, this.categories$]).pipe(
@@ -40,6 +40,6 @@ export class ProductListComponent {
   );
 
   onSelected({ tab }: MatTabChangeEvent): void {
-    this._productsService.selectedCategoryChange(tab.textLabel);
+    this._productService.selectedCategoryChange(tab.textLabel);
   }
 }
