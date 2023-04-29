@@ -1,0 +1,37 @@
+<form
+  [formGroup]="userDataForm"
+  (ngSubmit)="onSubmit()"
+  (input)="isValidUser = true"
+>
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'login.user-name' | translate }}</mat-label>
+    <input matInput type="text" formControlName="userName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'login.password' | translate }}</mat-label>
+    <input
+      matInput
+      [type]="isPasswordHide ? 'password' : 'text'"
+      formControlName="password"
+      required
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="isPasswordHide = !isPasswordHide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="isPasswordHide"
+    >
+      <mat-icon>{{
+        isPasswordHide ? 'visibility_off' : 'visibility'
+      }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-flat-button color="primary" [disabled]="userDataForm.invalid">
+    {{ 'login.login' | translate }}
+  </button>
+  <mat-error *ngIf="!isValidUser">{{
+    'login.not-correct-credentials' | translate
+  }}</mat-error>
+</form>

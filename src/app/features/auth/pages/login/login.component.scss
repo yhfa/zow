@@ -1,0 +1,17 @@
+form {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+
+  mat-form-field {
+    min-width: 30vw;
+    font-size: 1.6rem;
+  }
+
+  > button {
+    margin-top: 2rem;
+    width: 100px;
+  }
+}
