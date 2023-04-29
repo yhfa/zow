@@ -45,4 +45,16 @@ export class ProductService {
   selectedCategoryChange(selectedCategory: string): void {
     this._selectedCategorySubject.next(selectedCategory);
   }
+
+  addNewProduct(product: Product) {
+    return this._http.post<Product>(this._productsUrl, product);
+  }
+
+  updateProduct(id: number, product: Product) {
+    return this._http.patch<Product>(`${this._productsUrl}/${id}`, product);
+  }
+
+  deleteProduct(id: number) {
+    return this._http.delete<Product>(`${this._productsUrl}/${id}`);
+  }
 }
